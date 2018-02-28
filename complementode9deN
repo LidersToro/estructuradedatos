@@ -1,0 +1,32 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+void main ()
+{   int n,s,t,ne,x,y,z;
+	t=0;
+	y=0;
+	ne=0;
+	cin>>n;
+	while (n>0)
+	{
+	  s=n%10;
+	  if (s!=0)
+	  {
+		  t=9-s;
+	  }
+	  ne=ne*10+t;
+	  n=n/10;
+	}
+	
+	while(ne>0)
+	{ 
+		x=ne%10;
+		y=y*10+x;
+		ne=ne/10;
+	}
+	cout<<y;
+
+	getch();
+}
