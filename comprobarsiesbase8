@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+void main ()
+{   int n,s,t,ne,x,y,z;
+	t=0;
+	y=0;
+	cin>>n;
+	ne=n;
+	while (n>0)
+	{
+	  s=n%10;
+	  if (s==8)
+	  {
+		  cout<<s<<" no es base 8";
+	  }
+	  n=n/10;
+	}
+	cout<<ne<<" es base 8";
+	getch();
+}
