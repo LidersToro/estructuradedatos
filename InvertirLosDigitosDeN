@@ -1,0 +1,19 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+void main (){
+	int n,s,t;
+	t=0;
+	cin>>n;
+	while (n>0)
+	{
+	  s=n%10;
+	  t=t*10+s;
+	  n=n/10;
+
+	}
+	cout<<t;
+	getch();
+}
