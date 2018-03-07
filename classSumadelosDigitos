@@ -1,0 +1,56 @@
+#pragma once
+class digitos
+{
+private:
+     int n; //N es el Numero a ingresar y S es la suma total de los digitos del numero
+public:
+	digitos(void);
+	~digitos(void);
+	int sumadelosdigitos(int n);
+};
+
+---------------------------------------------------------------------------------------------
+
+#include "StdAfx.h"
+
+#include "digitos.h"
+
+
+digitos::digitos(void)
+{
+	n=5;
+}
+
+
+digitos::~digitos(void)
+{
+}
+
+int digitos::sumadelosdigitos(int n)
+{
+	int s,i,t;
+		s=0;
+	while (n>0){
+		t=n % 10;
+		s=s+t;
+		n=n/10;
+	}
+	return s;
+}
+
+------------------------------------------------------------------------------------------------
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "digitos.h"
+using namespace std;
+
+void main (){
+	digitos digitos1;
+	int n;
+	cout<<"Introduzca un Numero";
+	cin>>n;
+	cout<<"La suma de los digito es :"<<digitos1.sumadelosdigitos(n);
+	getch();
+}
