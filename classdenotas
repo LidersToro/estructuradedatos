@@ -40,3 +40,28 @@ float notas::tunotafinal(float p1,float p2,float p3,float np,float ef)
 
 
 }
+
+-----------------------------------------------------------------------------
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "notas.h"
+using namespace std;
+
+void main (){
+	notas notas1;
+	float p1,p2,p3,np,ef;
+	cout<<"Introduzca la primera nota parcial"<<endl;
+	cin>>p1;
+    cout<<"Introduzca la seguna nota parcial"<<endl;
+	cin>>p2;
+	cout<<"Introduzca la tercera nota parcial"<<endl;
+	cin>>p3;
+	cout<<"Introduzca la nota de los practicos"<<endl;
+	cin>>np;
+	cout<<"Introduzca la nota final"<<endl;
+	cin>>ef;
+	cout << "La nota final es: "<<notas1.tunotafinal(p1,p2,p3,np,ef)<<endl;
+	getch();
+}
