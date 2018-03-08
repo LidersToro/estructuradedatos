@@ -1,0 +1,42 @@
+#pragma once
+class notas
+{
+private:
+	float p1,p2,p3,np,ef;
+
+public:
+	notas(void);
+	~notas(void);
+	float tunotafinal (float p1,float p2,float p3,float np,float ef);
+};
+
+------------------------------------------------------------------------------
+
+#include "StdAfx.h"
+#include "notas.h"
+
+
+notas::notas(void)
+{
+	p1=1;
+	p2=1;
+	p3=1;
+	np=1;
+	ef=1;
+}
+
+
+notas::~notas(void)
+{
+}
+float notas::tunotafinal(float p1,float p2,float p3,float np,float ef)
+{
+	float f,g,h,nf;
+  f=((p1+p2+p3)/3)*0.4;
+  g=(np*0.2);
+  h=(ef*0.4);
+  nf=(f+g+h);
+  return nf;
+
+
+}
