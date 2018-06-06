@@ -1,0 +1,149 @@
+COLA.h
+#pragma una vez
+const int lleno = 100;
+clase COLA
+{
+privado:
+	int C [completo];
+	int frente;
+	int final;
+
+público:
+	COLA (vacío);
+	~ COLA (vacío);
+	bool vacia ();
+	bool llena ();
+	bool insertar (int x);
+	bool eliminar (int y x);
+	void mostrar ();
+};
+
+COLA.cpp
+#include "StdAfx.h"
+#include "OLA.h"
+#include <iostream>
+usando namespace std;
+
+COLA :: COLA (vacío)
+{
+	frente = -1;
+	final = -1;
+}
+
+
+COLA :: ~ COLA (vacío)
+{
+}
+
+bool COLA :: vacia ()
+{
+	if (frente == final)
+		devolver verdadero;
+	más 
+		falso retorno;
+}
+
+bool COLA :: llena ()
+{
+	if (final == full-1)
+		devolver verdadero;
+	más 
+		falso retorno;
+}
+bool COLA :: insertar (int x)
+{
+	
+	if (llena () == falso)
+	{
+		final ++;
+		C [final] = x;
+		devolver verdadero;
+	}
+	más
+	{
+		cout << "La cola esta llena" << endl;
+		falso retorno;
+	}
+}
+bool COLA :: eliminar (int & x)
+{
+	if (vacia () == verdadero)
+	{
+		cout << "La cola esta vacia" << endl;
+		falso retorno;
+	}
+	más
+	{
+		x = C [frente];
+		frente ++;
+		para (int i = 0; i <final; i ++)
+		{
+			C [i] = C [i + 1];
+		}
+		final--;
+		frente--;
+		devolver verdadero;
+	}
+}
+void COLA :: mostrar ()
+{
+	if (vacia () == falso)
+	{
+		para (int i = 0; i <= final; i ++)
+		{
+			cout << C [i] << "\ t";
+		}
+	}
+	más
+	{
+		cout << "La cola esta vacia" << endl;
+	}
+}
+
+main.cpp
+#include "stdafx.h"
+#include "OLA.h"
+#include "iostream"
+#include "stdlib.h"
+#include "conio.h"
+usando namespace std;
+vacío principal()
+{
+	COLA COLA1;
+	int op, x;
+	hacer
+	{
+		cout << "Digite la opcion:" << endl;
+		cout << "----- MENÚ -----" << endl;
+		cout << "1.-Ingresar elemento a la cola" << endl;
+		cout << "2.-Eliminar elemento de la cola" << endl;
+		cout << "3.-Mostrar cola" << endl;
+		cout << "0.-Salir" << endl;
+		cin >> op;
+		interruptor (op)
+		{
+		caso 1:
+			{
+				cout << "Ingrese el numero:";
+				cin >> x;
+				COLA1.insertar (x);
+				
+			}descanso;
+		caso 2:
+			{
+				COLA1.eliminar (x);
+
+			}descanso;
+		Caso 3:
+			{
+				COLA1.mostrar ();
+			}descanso;
+		caso 4:
+			{
+			} predeterminado: romper;
+		}
+		getch ();
+		sistema ("cls");
+	} while (op! = 0);
+	getch ();
+}
